@@ -1,0 +1,15 @@
+<project xmlns="com.autoesl.autopilot.project" top="matrix_add" name="proj_matrix_add">
+    <includePaths/>
+    <libraryPaths/>
+    <Simulation>
+        <SimFlow name="csim" setup="true" clean="true" csimMode="2" lastCsimMode="0"/>
+    </Simulation>
+    <files xmlns="">
+        <file name="../../matrix_add_tb.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" csimflags=" -Wno-unknown-pragmas" blackbox="false"/>
+        <file name="matrix_add.cpp" sc="0" tb="false" cflags="" csimflags="" blackbox="false"/>
+    </files>
+    <solutions xmlns="">
+        <solution name="solution1" status="active"/>
+    </solutions>
+</project>
+

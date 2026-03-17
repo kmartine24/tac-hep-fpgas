@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="vector_add.cpp" path="/scratch/kmartine/vector_add.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="vector_add_tb.cpp" path="/scratch/kmartine/vector_add_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

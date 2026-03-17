@@ -1,0 +1,4 @@
+#!/bin/sh
+lli=${LLVMINTERP-lli}
+exec $lli \
+    /scratch/kmartine/proj_matrix_add/solution1/.autopilot/db/a.g.bc ${1+"$@"}
