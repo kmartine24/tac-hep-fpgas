@@ -1,0 +1,156 @@
+<ENTRY>
+{
+ "thisFile": "/scratch/kmartine/hls_lex6-ex01/hls_lex6-ex01/hls_lex6-ex01.hlsrun_csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 17 14:19:47 2026",
+ "timestampMillis": "1773775187617",
+ "buildStep": {
+  "cmdId": "82dc6bda-092e-4bde-8378-ff60516b59e8",
+  "name": "vitis-run",
+  "logFile": "/scratch/kmartine/hls_lex6-ex01/hls_lex6-ex01/logs/hls_lex6-ex01.steps.log",
+  "commandLine": "/opt/Xilinx/Vitis/2024.1/bin/unwrapped/lnx64.o/vitis-run  --mode hls --csim --config /scratch/kmartine/hls_lex6-ex01/hls_config.cfg --work_dir hls_lex6-ex01 ",
+  "args": [
+   "--mode",
+   "hls",
+   "--csim",
+   "--config",
+   "/scratch/kmartine/hls_lex6-ex01/hls_config.cfg",
+   "--work_dir",
+   "hls_lex6-ex01"
+  ],
+  "iniFiles": [],
+  "cwd": "/scratch/kmartine/hls_lex6-ex01"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 17 14:19:47 2026",
+ "timestampMillis": "1773775187617",
+ "status": {
+  "cmdId": "82dc6bda-092e-4bde-8378-ff60516b59e8",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Mar 17 14:19:58 2026",
+ "timestampMillis": "1773775198309",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/scratch/kmartine/lex6-ex01.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.1"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Tue Mar 17 14:19:58 2026",
+ "timestampMillis": "1773775198311",
+ "buildStep": {
+  "cmdId": "302ce945-f3ca-48c0-b8f8-d37f671e2dff",
+  "name": "csim_design",
+  "logFile": "/scratch/kmartine/hls_lex6-ex01/hls_lex6-ex01/hls/hls.log",
+  "commandLine": "csim_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/scratch/kmartine/hls_lex6-ex01"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 17 14:19:58 2026",
+ "timestampMillis": "1773775198312",
+ "status": {
+  "cmdId": "302ce945-f3ca-48c0-b8f8-d37f671e2dff",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 17 14:20:03 2026",
+ "timestampMillis": "1773775203312",
+ "status": {
+  "cmdId": "302ce945-f3ca-48c0-b8f8-d37f671e2dff",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 17 14:20:03 2026",
+ "timestampMillis": "1773775203543",
+ "status": {
+  "cmdId": "82dc6bda-092e-4bde-8378-ff60516b59e8",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 17 14:20:03 2026",
+ "timestampMillis": "1773775203545",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "HTML",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Report",
+ "dateTimestamp": "Tue Mar 17 14:20:03 2026",
+ "timestampMillis": "1773775203545",
+ "report": {
+  "path": "",
+  "name": "",
+  "fileType": "BINARY_PROTOBUF",
+  "reportType": "GLOBAL_RULECHECK_GUIDANCE",
+  "cmdId": ""
+ }
+}
+</ENTRY>

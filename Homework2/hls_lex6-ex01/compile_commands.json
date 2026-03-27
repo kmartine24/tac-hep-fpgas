@@ -1,0 +1,14 @@
+[
+  {
+    "directory": "/scratch/kmartine/hls_lex6-ex01",
+    "arguments": [
+      "/opt/Xilinx/Vitis_HLS/2024.1/vcxx/libexec/clang++",
+      "-fhls",
+      "-hls-syn-headers-dir=/opt/Xilinx/Vitis_HLS/2024.1/common/technology/autopilot",
+      "",
+      "-c",
+      "/scratch/kmartine/lex6-ex01.cpp"
+    ],
+    "file": "/scratch/kmartine/lex6-ex01.cpp"
+  }
+]

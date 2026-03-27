@@ -1,0 +1,6 @@
+{
+  "workspaceRoot": "/scratch/kmartine",
+  "mapping": {
+    "lex6-ex01.cpp": "hls_lex6-ex01"
+  }
+}

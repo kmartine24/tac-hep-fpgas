@@ -1,0 +1,13 @@
+14:00:24 INFO  : updated workspace path: /scratch/kmartine
+14:00:24 INFO  : created .gitignore file for the project /scratch/kmartine
+14:00:27 INFO  : Successfully created repository data at /tmp/rigel_lopper_kmartine11300465827626149934
+14:00:27 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.1/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.1/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_kmartine8511325580548974691 -r /tmp/rigel_lopper_kmartine11300465827626149934/.repo.yaml && deactivate
+14:00:28 INFO  : Embedded Template List generated successfully
+14:00:28 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.1/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.1/data/embeddedsw/scripts/pyesw//repo.py -st   /opt/Xilinx/Vitis/2024.1/data/embeddedsw && deactivate
+14:00:31 INFO  : Successfully created repository data at /scratch/kmartine/.wsdata
+14:00:31 INFO  : bash, -c, source /opt/Xilinx/Vitis/2024.1/tps/lnx64/lopper-1.1.0/env/bin/activate && python /opt/Xilinx/Vitis/2024.1/data/embeddedsw/scripts/pyesw//get_template_data.py -d /tmp/rigel_lopper_kmartine2370456209212366858 -r /scratch/kmartine/.wsdata/.repo.yaml && deactivate
+14:00:32 INFO  : Embedded Template List generated successfully
+14:16:02 INFO  : created .gitignore file for the project /scratch/kmartine/hls_lex6-ex01
+14:19:36 INFO  : created .gitignore file for the project /scratch/kmartine/hls_lex6-ex01
+14:21:38 INFO  : Terminating Vitis C++ Server
+14:21:38 INFO  : Vitis C++ Server terminated

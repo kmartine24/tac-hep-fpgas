@@ -1,0 +1,66 @@
+<ENTRY>
+{
+ "thisFile": "/scratch/kmartine/hls_lex6-ex01/hls_lex6-ex01/hls/csim/code_analyzer/app.csim_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Tue Mar 17 14:20:03 2026",
+ "timestampMillis": "1773775203223",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_C_SIM",
+  "kernels": [],
+  "toolVersion": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Tue Mar 17 14:20:03 2026",
+ "timestampMillis": "1773775203224",
+ "buildStep": {
+  "cmdId": "4c801c30-2236-11f1-8bad-002590e39f2e",
+  "name": "vitis_c++",
+  "logFile": "",
+  "commandLine": "vitis_c++ code_analyzer",
+  "args": [
+   "code_analyzer"
+  ],
+  "iniFiles": [],
+  "cwd": ""
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 17 14:20:03 2026",
+ "timestampMillis": "1773775203225",
+ "status": {
+  "cmdId": "4c801c30-2236-11f1-8bad-002590e39f2e",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Tue Mar 17 14:20:03 2026",
+ "timestampMillis": "1773775203227",
+ "status": {
+  "cmdId": "4c801c30-2236-11f1-8bad-002590e39f2e",
+  "state": "CS_FAILED"
+ }
+}
+</ENTRY>

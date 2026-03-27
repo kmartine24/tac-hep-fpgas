@@ -1,0 +1,3 @@
+relativeroot=/scratch/kmartine/hls_lex6-ex01
+original_argv=--mode hls --csim --config /scratch/kmartine/hls_lex6-ex01/hls_config.cfg --work_dir hls_lex6-ex01 
+
