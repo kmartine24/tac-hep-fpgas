@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="hw5_ex1.cpp" path="/scratch/kmartine/hw5_ex1.cpp"/>
+    <originFiles name="hw5_ex1.h" path="/scratch/kmartine/hw5_ex1.h"/>
+  </source>
+  <testbench>
+    <originFiles name="hw5_ex1_tb.cpp" path="/scratch/kmartine/hw5_ex1_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
