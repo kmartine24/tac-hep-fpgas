@@ -1,0 +1,605 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-1-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'neural_net.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 169303 ; free virtual = 205244
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 169303 ; free virtual = 205244
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 169294 ; free virtual = 205236
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 169296 ; free virtual = 205238
+INFO: [XFORM 203-101] Partitioning array 'in' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-101] Partitioning array 'out' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-101] Partitioning array 'weight' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[0]' in function 'neural_net' (neural_net.cpp:48:17).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[1]' in function 'neural_net' (neural_net.cpp:48:17).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[2]' in function 'neural_net' (neural_net.cpp:48:17).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[0]' in function 'neural_net' (neural_net.cpp:50:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[1]' in function 'neural_net' (neural_net.cpp:50:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[2]' in function 'neural_net' (neural_net.cpp:50:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[3]' in function 'neural_net' (neural_net.cpp:50:13).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 169285 ; free virtual = 205228
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 169283 ; free virtual = 205226
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'neural_net' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.74 seconds; current allocated memory: 147.491 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 147.843 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'neural_net' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'neural_net_mux_432_32_1_1' to 'neural_net_mux_43bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'neural_net_mux_43bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_net'.
+INFO: [HLS 200-111]  Elapsed time: 0.16 seconds; current allocated memory: 148.395 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-1-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'neural_net.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168736 ; free virtual = 204711
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168743 ; free virtual = 204717
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168736 ; free virtual = 204711
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168734 ; free virtual = 204709
+INFO: [XFORM 203-101] Partitioning array 'in' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-101] Partitioning array 'out' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-101] Partitioning array 'weight' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[0]' in function 'neural_net' (neural_net.cpp:66:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[1]' in function 'neural_net' (neural_net.cpp:66:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[2]' in function 'neural_net' (neural_net.cpp:66:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[0]' in function 'neural_net' (neural_net.cpp:68:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[1]' in function 'neural_net' (neural_net.cpp:68:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[2]' in function 'neural_net' (neural_net.cpp:68:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[3]' in function 'neural_net' (neural_net.cpp:68:13).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168715 ; free virtual = 204690
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1.1' (neural_net.cpp:53:23) in function 'neural_net' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (neural_net.cpp:52:16) in function 'neural_net'.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168712 ; free virtual = 204688
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'neural_net' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.77 seconds; current allocated memory: 147.584 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 147.963 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'neural_net' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'neural_net_mux_432_32_1_1' to 'neural_net_mux_43bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_d1' to 0.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-1-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'neural_net.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168747 ; free virtual = 204725
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168747 ; free virtual = 204725
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168740 ; free virtual = 204718
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168745 ; free virtual = 204723
+INFO: [XFORM 203-101] Partitioning array 'in' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-101] Partitioning array 'out' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-101] Partitioning array 'weight' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[0]' in function 'neural_net' (neural_net.cpp:66:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[1]' in function 'neural_net' (neural_net.cpp:66:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[2]' in function 'neural_net' (neural_net.cpp:66:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[0]' in function 'neural_net' (neural_net.cpp:68:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[1]' in function 'neural_net' (neural_net.cpp:68:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[2]' in function 'neural_net' (neural_net.cpp:68:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[3]' in function 'neural_net' (neural_net.cpp:68:13).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168729 ; free virtual = 204708
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168728 ; free virtual = 204707
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'neural_net' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.78 seconds; current allocated memory: 147.550 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 147.925 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'neural_net' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'neural_net_mux_432_32_1_1' to 'neural_net_mux_43bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'neural_net_mux_43bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_net'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 148.522 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-1-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'neural_net.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168754 ; free virtual = 204732
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168754 ; free virtual = 204732
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168746 ; free virtual = 204725
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168742 ; free virtual = 204720
+INFO: [XFORM 203-101] Partitioning array 'in' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-101] Partitioning array 'out' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+INFO: [XFORM 203-101] Partitioning array 'weight' (neural_net.cpp:5) in dimension 1 with a block factor 4.
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[0]' in function 'neural_net' (neural_net.cpp:66:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[1]' in function 'neural_net' (neural_net.cpp:66:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'in[2]' in function 'neural_net' (neural_net.cpp:66:2).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[0]' in function 'neural_net' (neural_net.cpp:68:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[1]' in function 'neural_net' (neural_net.cpp:68:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[2]' in function 'neural_net' (neural_net.cpp:68:13).
+WARNING: [ANALYSIS 214-31] The program may have out of bound access of array variable 'out[3]' in function 'neural_net' (neural_net.cpp:68:13).
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168727 ; free virtual = 204706
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168726 ; free virtual = 204705
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'neural_net' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'neural_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 19.8 seconds; current allocated memory: 147.480 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.08 seconds; current allocated memory: 147.846 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_net' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'neural_net' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'neural_net_mux_432_32_1_1' to 'neural_net_mux_43bkb' due to the length limit 20
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_address0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_address0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_ce0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_ce0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_we0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_we0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_d0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_d0' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_q0' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_address1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_address1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_ce1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_ce1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_we1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_we1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_d1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+WARNING: [RTGEN 206-101] Setting dangling out port 'neural_net/in_3_d1' to 0.
+WARNING: [RTGEN 206-101] Port 'neural_net/in_3_q1' has no fanin or fanout and is left dangling.
+               Please use C simulation to confirm this function argument can be read from or written to.
+INFO: [RTGEN 206-100] Generating core module 'neural_net_mux_43bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_net'.
+INFO: [HLS 200-111]  Elapsed time: 0.18 seconds; current allocated memory: 148.428 MB.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2020.1 (64-bit)
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+==============================================================

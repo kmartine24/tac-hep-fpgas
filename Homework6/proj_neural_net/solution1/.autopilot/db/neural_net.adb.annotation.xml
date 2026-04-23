@@ -1,0 +1,14 @@
+<annotationInfo>
+<item  id="63" filename="neural_net.cpp" linenumber="52" name="icmp_ln52" contextFuncName="neural_net" moduleName="neural_net" rtlName="icmp_ln52_fu_424_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="65" filename="neural_net.cpp" linenumber="52" name="i" contextFuncName="neural_net" moduleName="neural_net" rtlName="i_fu_430_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="71" filename="neural_net.cpp" linenumber="53" name="icmp_ln53" contextFuncName="neural_net" moduleName="neural_net" rtlName="icmp_ln53_fu_436_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="73" filename="neural_net.cpp" linenumber="53" name="j" contextFuncName="neural_net" moduleName="neural_net" rtlName="j_fu_442_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="12" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="76" filename="neural_net.cpp" linenumber="66" name="trunc_ln66" contextFuncName="neural_net" moduleName="neural_net" rtlName="trunc_ln66_fu_448_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="81" filename="neural_net.cpp" linenumber="55" name="icmp_ln55" contextFuncName="neural_net" moduleName="neural_net" rtlName="icmp_ln55_fu_452_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="9" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="83" filename="neural_net.cpp" linenumber="55" name="k" contextFuncName="neural_net" moduleName="neural_net" rtlName="k_fu_458_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="86" filename="neural_net.cpp" linenumber="66" name="zext_ln66" contextFuncName="neural_net" moduleName="neural_net" rtlName="zext_ln66_fu_464_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="93" filename="neural_net.cpp" linenumber="66" name="tmp" contextFuncName="neural_net" moduleName="neural_net" rtlName="neural_net_mux_63bkb_U1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="110" filename="neural_net.cpp" linenumber="66" name="tmp_1" contextFuncName="neural_net" moduleName="neural_net" rtlName="neural_net_mux_83cud_U2" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="111" filename="neural_net.cpp" linenumber="66" name="mul_ln66" contextFuncName="neural_net" moduleName="neural_net" rtlName="mul_ln66_fu_515_p2" latency="0" BRAM="-1" DSP="3" FF="0" LUT="20" fileDirectory="/scratch/kmartine"><\/item>
+<item  id="112" filename="neural_net.cpp" linenumber="66" name="sum" contextFuncName="neural_net" moduleName="neural_net" rtlName="sum_fu_521_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="39" fileDirectory="/scratch/kmartine"><\/item>
+</annotationInfo>

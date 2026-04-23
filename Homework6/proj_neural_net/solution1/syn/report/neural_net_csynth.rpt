@@ -1,0 +1,233 @@
+
+
+================================================================
+== Vivado HLS Report for 'neural_net'
+================================================================
+* Date:           Thu Apr 23 16:37:18 2026
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        proj_neural_net
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 25.00 ns | 6.527 ns |   3.12 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |      733|      733| 18.325 us | 18.325 us |  733|  733|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1         |      732|      732|       122|          -|          -|     6|    no    |
+        | + Loop 1.1      |      120|      120|        15|          -|          -|     8|    no    |
+        |  ++ Loop 1.1.1  |       12|       12|         2|          -|          -|     6|    no    |
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+-------+---------+---------+-----+
+|         Name        | BRAM_18K| DSP48E|    FF   |   LUT   | URAM|
++---------------------+---------+-------+---------+---------+-----+
+|DSP                  |        -|      -|        -|        -|    -|
+|Expression           |        -|      3|        0|      122|    -|
+|FIFO                 |        -|      -|        -|        -|    -|
+|Instance             |        -|      -|        0|       66|    -|
+|Memory               |        -|      -|        -|        -|    -|
+|Multiplexer          |        -|      -|        -|       74|    -|
+|Register             |        -|      -|       61|        -|    -|
++---------------------+---------+-------+---------+---------+-----+
+|Total                |        0|      3|       61|      262|    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available SLR        |     1440|   2280|   788160|   394080|  320|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization SLR (%)  |        0|   ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+|Available            |     4320|   6840|  2364480|  1182240|  960|
++---------------------+---------+-------+---------+---------+-----+
+|Utilization (%)      |        0|   ~0  |    ~0   |    ~0   |    0|
++---------------------+---------+-------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------------+----------------------+---------+-------+---+----+-----+
+    |         Instance        |        Module        | BRAM_18K| DSP48E| FF| LUT| URAM|
+    +-------------------------+----------------------+---------+-------+---+----+-----+
+    |neural_net_mux_63bkb_U1  |neural_net_mux_63bkb  |        0|      0|  0|  33|    0|
+    |neural_net_mux_83cud_U2  |neural_net_mux_83cud  |        0|      0|  0|  33|    0|
+    +-------------------------+----------------------+---------+-------+---+----+-----+
+    |Total                    |                      |        0|      0|  0|  66|    0|
+    +-------------------------+----------------------+---------+-------+---+----+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |mul_ln66_fu_515_p2   |     *    |      3|  0|  20|          32|          32|
+    |i_fu_430_p2          |     +    |      0|  0|  11|           3|           1|
+    |j_fu_442_p2          |     +    |      0|  0|  12|           4|           1|
+    |k_fu_458_p2          |     +    |      0|  0|  11|           3|           1|
+    |sum_fu_521_p2        |     +    |      0|  0|  39|          32|          32|
+    |icmp_ln52_fu_424_p2  |   icmp   |      0|  0|   9|           3|           3|
+    |icmp_ln53_fu_436_p2  |   icmp   |      0|  0|  11|           4|           5|
+    |icmp_ln55_fu_452_p2  |   icmp   |      0|  0|   9|           3|           3|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      3|  0| 122|          84|          78|
+    +---------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------+----+-----------+-----+-----------+
+    |      Name     | LUT| Input Size| Bits| Total Bits|
+    +---------------+----+-----------+-----+-----------+
+    |ap_NS_fsm      |  38|          7|    1|          7|
+    |i_0_reg_370    |   9|          2|    3|          6|
+    |j_0_reg_381    |   9|          2|    4|          8|
+    |k_0_reg_412    |   9|          2|    3|          6|
+    |sum_0_reg_392  |   9|          2|   32|         64|
+    +---------------+----+-----------+-----+-----------+
+    |Total          |  74|         15|   43|         91|
+    +---------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------+----+----+-----+-----------+
+    |        Name        | FF | LUT| Bits| Const Bits|
+    +--------------------+----+----+-----+-----------+
+    |ap_CS_fsm           |   6|   0|    6|          0|
+    |i_0_reg_370         |   3|   0|    3|          0|
+    |i_reg_600           |   3|   0|    3|          0|
+    |j_0_reg_381         |   4|   0|    4|          0|
+    |j_reg_608           |   4|   0|    4|          0|
+    |k_0_reg_412         |   3|   0|    3|          0|
+    |k_reg_621           |   3|   0|    3|          0|
+    |sum_0_reg_392       |  32|   0|   32|          0|
+    |trunc_ln66_reg_613  |   3|   0|    3|          0|
+    +--------------------+----+----+-----+-----------+
+    |Total               |  61|   0|   61|          0|
+    +--------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+--------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object|    C Type    |
++-------------------+-----+-----+------------+--------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs |  neural_net  | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |  neural_net  | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |  neural_net  | return value |
+|ap_done            | out |    1| ap_ctrl_hs |  neural_net  | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |  neural_net  | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |  neural_net  | return value |
+|in_0_address0      | out |    1|  ap_memory |     in_0     |     array    |
+|in_0_ce0           | out |    1|  ap_memory |     in_0     |     array    |
+|in_0_q0            |  in |   32|  ap_memory |     in_0     |     array    |
+|in_1_address0      | out |    1|  ap_memory |     in_1     |     array    |
+|in_1_ce0           | out |    1|  ap_memory |     in_1     |     array    |
+|in_1_q0            |  in |   32|  ap_memory |     in_1     |     array    |
+|in_2_address0      | out |    1|  ap_memory |     in_2     |     array    |
+|in_2_ce0           | out |    1|  ap_memory |     in_2     |     array    |
+|in_2_q0            |  in |   32|  ap_memory |     in_2     |     array    |
+|in_3_address0      | out |    1|  ap_memory |     in_3     |     array    |
+|in_3_ce0           | out |    1|  ap_memory |     in_3     |     array    |
+|in_3_q0            |  in |   32|  ap_memory |     in_3     |     array    |
+|in_4_address0      | out |    1|  ap_memory |     in_4     |     array    |
+|in_4_ce0           | out |    1|  ap_memory |     in_4     |     array    |
+|in_4_q0            |  in |   32|  ap_memory |     in_4     |     array    |
+|in_5_address0      | out |    1|  ap_memory |     in_5     |     array    |
+|in_5_ce0           | out |    1|  ap_memory |     in_5     |     array    |
+|in_5_q0            |  in |   32|  ap_memory |     in_5     |     array    |
+|out_0_address0     | out |    1|  ap_memory |     out_0    |     array    |
+|out_0_ce0          | out |    1|  ap_memory |     out_0    |     array    |
+|out_0_we0          | out |    1|  ap_memory |     out_0    |     array    |
+|out_0_d0           | out |   32|  ap_memory |     out_0    |     array    |
+|out_1_address0     | out |    1|  ap_memory |     out_1    |     array    |
+|out_1_ce0          | out |    1|  ap_memory |     out_1    |     array    |
+|out_1_we0          | out |    1|  ap_memory |     out_1    |     array    |
+|out_1_d0           | out |   32|  ap_memory |     out_1    |     array    |
+|out_2_address0     | out |    1|  ap_memory |     out_2    |     array    |
+|out_2_ce0          | out |    1|  ap_memory |     out_2    |     array    |
+|out_2_we0          | out |    1|  ap_memory |     out_2    |     array    |
+|out_2_d0           | out |   32|  ap_memory |     out_2    |     array    |
+|out_3_address0     | out |    1|  ap_memory |     out_3    |     array    |
+|out_3_ce0          | out |    1|  ap_memory |     out_3    |     array    |
+|out_3_we0          | out |    1|  ap_memory |     out_3    |     array    |
+|out_3_d0           | out |   32|  ap_memory |     out_3    |     array    |
+|out_4_address0     | out |    1|  ap_memory |     out_4    |     array    |
+|out_4_ce0          | out |    1|  ap_memory |     out_4    |     array    |
+|out_4_we0          | out |    1|  ap_memory |     out_4    |     array    |
+|out_4_d0           | out |   32|  ap_memory |     out_4    |     array    |
+|out_5_address0     | out |    1|  ap_memory |     out_5    |     array    |
+|out_5_ce0          | out |    1|  ap_memory |     out_5    |     array    |
+|out_5_we0          | out |    1|  ap_memory |     out_5    |     array    |
+|out_5_d0           | out |   32|  ap_memory |     out_5    |     array    |
+|out_6_address0     | out |    1|  ap_memory |     out_6    |     array    |
+|out_6_ce0          | out |    1|  ap_memory |     out_6    |     array    |
+|out_6_we0          | out |    1|  ap_memory |     out_6    |     array    |
+|out_6_d0           | out |   32|  ap_memory |     out_6    |     array    |
+|out_7_address0     | out |    1|  ap_memory |     out_7    |     array    |
+|out_7_ce0          | out |    1|  ap_memory |     out_7    |     array    |
+|out_7_we0          | out |    1|  ap_memory |     out_7    |     array    |
+|out_7_d0           | out |   32|  ap_memory |     out_7    |     array    |
+|weight_0_address0  | out |    3|  ap_memory |   weight_0   |     array    |
+|weight_0_ce0       | out |    1|  ap_memory |   weight_0   |     array    |
+|weight_0_q0        |  in |   32|  ap_memory |   weight_0   |     array    |
+|weight_1_address0  | out |    3|  ap_memory |   weight_1   |     array    |
+|weight_1_ce0       | out |    1|  ap_memory |   weight_1   |     array    |
+|weight_1_q0        |  in |   32|  ap_memory |   weight_1   |     array    |
+|weight_2_address0  | out |    3|  ap_memory |   weight_2   |     array    |
+|weight_2_ce0       | out |    1|  ap_memory |   weight_2   |     array    |
+|weight_2_q0        |  in |   32|  ap_memory |   weight_2   |     array    |
+|weight_3_address0  | out |    3|  ap_memory |   weight_3   |     array    |
+|weight_3_ce0       | out |    1|  ap_memory |   weight_3   |     array    |
+|weight_3_q0        |  in |   32|  ap_memory |   weight_3   |     array    |
+|weight_4_address0  | out |    3|  ap_memory |   weight_4   |     array    |
+|weight_4_ce0       | out |    1|  ap_memory |   weight_4   |     array    |
+|weight_4_q0        |  in |   32|  ap_memory |   weight_4   |     array    |
+|weight_5_address0  | out |    3|  ap_memory |   weight_5   |     array    |
+|weight_5_ce0       | out |    1|  ap_memory |   weight_5   |     array    |
+|weight_5_q0        |  in |   32|  ap_memory |   weight_5   |     array    |
+|weight_6_address0  | out |    3|  ap_memory |   weight_6   |     array    |
+|weight_6_ce0       | out |    1|  ap_memory |   weight_6   |     array    |
+|weight_6_q0        |  in |   32|  ap_memory |   weight_6   |     array    |
+|weight_7_address0  | out |    3|  ap_memory |   weight_7   |     array    |
+|weight_7_ce0       | out |    1|  ap_memory |   weight_7   |     array    |
+|weight_7_q0        |  in |   32|  ap_memory |   weight_7   |     array    |
++-------------------+-----+-----+------------+--------------+--------------+
+

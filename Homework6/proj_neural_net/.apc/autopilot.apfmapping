@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="neural_net.cpp" path="/scratch/kmartine/neural_net.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="neural_net_tb.cpp" path="/scratch/kmartine/neural_net_tb.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

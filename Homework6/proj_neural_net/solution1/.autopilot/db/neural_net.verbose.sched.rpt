@@ -1,0 +1,282 @@
+
+
+================================================================
+== Vivado HLS Report for 'neural_net'
+================================================================
+* Date:           Thu Apr 23 16:37:17 2026
+
+* Version:        2020.1 (Build 2897737 on Wed May 27 20:21:37 MDT 2020)
+* Project:        proj_neural_net
+* Solution:       solution1
+* Product family: virtexuplus
+* Target device:  xcvu9p-flga2104-1-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  | 25.00 ns | 6.527 ns |   3.12 ns  |
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval | Pipeline|
+    |   min   |   max   |    min    |    max    | min | max |   Type  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+    |      733|      733| 18.325 us | 18.325 us |  733|  733|   none  |
+    +---------+---------+-----------+-----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                 |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |    Loop Name    |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1         |      732|      732|       122|          -|          -|     6|    no    |
+        | + Loop 1.1      |      120|      120|        15|          -|          -|     8|    no    |
+        |  ++ Loop 1.1.1  |       12|       12|         2|          -|          -|     6|    no    |
+        +-----------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 6
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 2 
+4 --> 5 6 
+5 --> 4 
+6 --> 3 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 0.73>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i32]* %weight_7), !map !14"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i32]* %weight_6), !map !21"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i32]* %weight_5), !map !27"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i32]* %weight_4), !map !33"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i32]* %weight_3), !map !39"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i32]* %weight_2), !map !45"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i32]* %weight_1), !map !51"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([6 x i32]* %weight_0), !map !57"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %out_7), !map !63"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %out_6), !map !68"   --->   Operation 16 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %out_5), !map !73"   --->   Operation 17 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %out_4), !map !78"   --->   Operation 18 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %out_3), !map !83"   --->   Operation 19 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %out_2), !map !88"   --->   Operation 20 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %out_1), !map !93"   --->   Operation 21 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %out_0), !map !98"   --->   Operation 22 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %in_5), !map !103"   --->   Operation 23 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %in_4), !map !107"   --->   Operation 24 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %in_3), !map !111"   --->   Operation 25 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %in_2), !map !115"   --->   Operation 26 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %in_1), !map !119"   --->   Operation 27 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([1 x i32]* %in_0), !map !123"   --->   Operation 28 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([11 x i8]* @neural_net_str) nounwind"   --->   Operation 29 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%out_0_addr = getelementptr [1 x i32]* %out_0, i64 0, i64 0" [neural_net.cpp:68]   --->   Operation 30 'getelementptr' 'out_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%out_1_addr = getelementptr [1 x i32]* %out_1, i64 0, i64 0" [neural_net.cpp:68]   --->   Operation 31 'getelementptr' 'out_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%out_2_addr = getelementptr [1 x i32]* %out_2, i64 0, i64 0" [neural_net.cpp:68]   --->   Operation 32 'getelementptr' 'out_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%out_3_addr = getelementptr [1 x i32]* %out_3, i64 0, i64 0" [neural_net.cpp:68]   --->   Operation 33 'getelementptr' 'out_3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (0.00ns)   --->   "%out_4_addr = getelementptr [1 x i32]* %out_4, i64 0, i64 0" [neural_net.cpp:68]   --->   Operation 34 'getelementptr' 'out_4_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "%out_5_addr = getelementptr [1 x i32]* %out_5, i64 0, i64 0" [neural_net.cpp:68]   --->   Operation 35 'getelementptr' 'out_5_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [1/1] (0.00ns)   --->   "%out_6_addr = getelementptr [1 x i32]* %out_6, i64 0, i64 0" [neural_net.cpp:68]   --->   Operation 36 'getelementptr' 'out_6_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 37 [1/1] (0.00ns)   --->   "%out_7_addr = getelementptr [1 x i32]* %out_7, i64 0, i64 0" [neural_net.cpp:68]   --->   Operation 37 'getelementptr' 'out_7_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 38 [1/1] (0.00ns)   --->   "%in_0_addr = getelementptr [1 x i32]* %in_0, i64 0, i64 0" [neural_net.cpp:66]   --->   Operation 38 'getelementptr' 'in_0_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 39 [1/1] (0.00ns)   --->   "%in_1_addr = getelementptr [1 x i32]* %in_1, i64 0, i64 0" [neural_net.cpp:66]   --->   Operation 39 'getelementptr' 'in_1_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 40 [1/1] (0.00ns)   --->   "%in_2_addr = getelementptr [1 x i32]* %in_2, i64 0, i64 0" [neural_net.cpp:66]   --->   Operation 40 'getelementptr' 'in_2_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 41 [1/1] (0.00ns)   --->   "%in_3_addr = getelementptr [1 x i32]* %in_3, i64 0, i64 0" [neural_net.cpp:66]   --->   Operation 41 'getelementptr' 'in_3_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%in_4_addr = getelementptr [1 x i32]* %in_4, i64 0, i64 0" [neural_net.cpp:66]   --->   Operation 42 'getelementptr' 'in_4_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%in_5_addr = getelementptr [1 x i32]* %in_5, i64 0, i64 0" [neural_net.cpp:66]   --->   Operation 43 'getelementptr' 'in_5_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 44 [1/1] (0.73ns)   --->   "br label %.loopexit" [neural_net.cpp:52]   --->   Operation 44 'br' <Predicate = true> <Delay = 0.73>
+
+State 2 <SV = 1> <Delay = 0.73>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%i_0 = phi i3 [ 0, %0 ], [ %i, %.loopexit.loopexit ]"   --->   Operation 45 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.56ns)   --->   "%icmp_ln52 = icmp eq i3 %i_0, -2" [neural_net.cpp:52]   --->   Operation 46 'icmp' 'icmp_ln52' <Predicate = true> <Delay = 0.56> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.56> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind"   --->   Operation 47 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.71ns)   --->   "%i = add i3 %i_0, 1" [neural_net.cpp:52]   --->   Operation 48 'add' 'i' <Predicate = true> <Delay = 0.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "br i1 %icmp_ln52, label %4, label %.preheader1.preheader" [neural_net.cpp:52]   --->   Operation 49 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.73ns)   --->   "br label %.preheader1" [neural_net.cpp:53]   --->   Operation 50 'br' <Predicate = (!icmp_ln52)> <Delay = 0.73>
+ST_2 : Operation 51 [1/1] (0.00ns)   --->   "ret void" [neural_net.cpp:71]   --->   Operation 51 'ret' <Predicate = (icmp_ln52)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 0.80>
+ST_3 : Operation 52 [1/1] (0.00ns)   --->   "%j_0 = phi i4 [ %j, %3 ], [ 0, %.preheader1.preheader ]"   --->   Operation 52 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 53 [1/1] (0.72ns)   --->   "%icmp_ln53 = icmp eq i4 %j_0, -8" [neural_net.cpp:53]   --->   Operation 53 'icmp' 'icmp_ln53' <Predicate = true> <Delay = 0.72> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.56> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 54 [1/1] (0.00ns)   --->   "%empty_2 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 8, i64 8, i64 8) nounwind"   --->   Operation 54 'speclooptripcount' 'empty_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 55 [1/1] (0.80ns)   --->   "%j = add i4 %j_0, 1" [neural_net.cpp:53]   --->   Operation 55 'add' 'j' <Predicate = true> <Delay = 0.80> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 56 [1/1] (0.00ns)   --->   "br i1 %icmp_ln53, label %.loopexit.loopexit, label %.preheader.preheader" [neural_net.cpp:53]   --->   Operation 56 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 57 [1/1] (0.00ns)   --->   "%trunc_ln66 = trunc i4 %j_0 to i3" [neural_net.cpp:66]   --->   Operation 57 'trunc' 'trunc_ln66' <Predicate = (!icmp_ln53)> <Delay = 0.00>
+ST_3 : Operation 58 [1/1] (0.73ns)   --->   "br label %.preheader" [neural_net.cpp:55]   --->   Operation 58 'br' <Predicate = (!icmp_ln53)> <Delay = 0.73>
+ST_3 : Operation 59 [1/1] (0.00ns)   --->   "br label %.loopexit"   --->   Operation 59 'br' <Predicate = (icmp_ln53)> <Delay = 0.00>
+
+State 4 <SV = 3> <Delay = 0.73>
+ST_4 : Operation 60 [1/1] (0.00ns)   --->   "%sum_0 = phi i32 [ %sum, %1 ], [ 0, %.preheader.preheader ]"   --->   Operation 60 'phi' 'sum_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 61 [1/1] (0.00ns)   --->   "%k_0 = phi i3 [ %k, %1 ], [ 0, %.preheader.preheader ]"   --->   Operation 61 'phi' 'k_0' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 62 [1/1] (0.56ns)   --->   "%icmp_ln55 = icmp eq i3 %k_0, -2" [neural_net.cpp:55]   --->   Operation 62 'icmp' 'icmp_ln55' <Predicate = true> <Delay = 0.56> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.56> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 63 [1/1] (0.00ns)   --->   "%empty_3 = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 6, i64 6, i64 6) nounwind"   --->   Operation 63 'speclooptripcount' 'empty_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 64 [1/1] (0.71ns)   --->   "%k = add i3 %k_0, 1" [neural_net.cpp:55]   --->   Operation 64 'add' 'k' <Predicate = true> <Delay = 0.71> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 65 [1/1] (0.00ns)   --->   "br i1 %icmp_ln55, label %2, label %1" [neural_net.cpp:55]   --->   Operation 65 'br' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln66 = zext i3 %k_0 to i64" [neural_net.cpp:66]   --->   Operation 66 'zext' 'zext_ln66' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_4 : Operation 67 [2/2] (0.73ns)   --->   "%in_0_load = load i32* %in_0_addr, align 4" [neural_net.cpp:66]   --->   Operation 67 'load' 'in_0_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 68 [2/2] (0.73ns)   --->   "%in_1_load = load i32* %in_1_addr, align 4" [neural_net.cpp:66]   --->   Operation 68 'load' 'in_1_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 69 [2/2] (0.73ns)   --->   "%in_2_load = load i32* %in_2_addr, align 4" [neural_net.cpp:66]   --->   Operation 69 'load' 'in_2_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 70 [2/2] (0.73ns)   --->   "%in_3_load = load i32* %in_3_addr, align 4" [neural_net.cpp:66]   --->   Operation 70 'load' 'in_3_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 71 [2/2] (0.73ns)   --->   "%in_4_load = load i32* %in_4_addr, align 4" [neural_net.cpp:66]   --->   Operation 71 'load' 'in_4_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 72 [2/2] (0.73ns)   --->   "%in_5_load = load i32* %in_5_addr, align 4" [neural_net.cpp:66]   --->   Operation 72 'load' 'in_5_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 73 [1/1] (0.00ns)   --->   "%weight_0_addr = getelementptr [6 x i32]* %weight_0, i64 0, i64 %zext_ln66" [neural_net.cpp:66]   --->   Operation 73 'getelementptr' 'weight_0_addr' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_4 : Operation 74 [2/2] (0.73ns)   --->   "%weight_0_load = load i32* %weight_0_addr, align 4" [neural_net.cpp:66]   --->   Operation 74 'load' 'weight_0_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 75 [1/1] (0.00ns)   --->   "%weight_1_addr = getelementptr [6 x i32]* %weight_1, i64 0, i64 %zext_ln66" [neural_net.cpp:66]   --->   Operation 75 'getelementptr' 'weight_1_addr' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_4 : Operation 76 [2/2] (0.73ns)   --->   "%weight_1_load = load i32* %weight_1_addr, align 4" [neural_net.cpp:66]   --->   Operation 76 'load' 'weight_1_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 77 [1/1] (0.00ns)   --->   "%weight_2_addr = getelementptr [6 x i32]* %weight_2, i64 0, i64 %zext_ln66" [neural_net.cpp:66]   --->   Operation 77 'getelementptr' 'weight_2_addr' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_4 : Operation 78 [2/2] (0.73ns)   --->   "%weight_2_load = load i32* %weight_2_addr, align 4" [neural_net.cpp:66]   --->   Operation 78 'load' 'weight_2_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 79 [1/1] (0.00ns)   --->   "%weight_3_addr = getelementptr [6 x i32]* %weight_3, i64 0, i64 %zext_ln66" [neural_net.cpp:66]   --->   Operation 79 'getelementptr' 'weight_3_addr' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_4 : Operation 80 [2/2] (0.73ns)   --->   "%weight_3_load = load i32* %weight_3_addr, align 4" [neural_net.cpp:66]   --->   Operation 80 'load' 'weight_3_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 81 [1/1] (0.00ns)   --->   "%weight_4_addr = getelementptr [6 x i32]* %weight_4, i64 0, i64 %zext_ln66" [neural_net.cpp:66]   --->   Operation 81 'getelementptr' 'weight_4_addr' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_4 : Operation 82 [2/2] (0.73ns)   --->   "%weight_4_load = load i32* %weight_4_addr, align 4" [neural_net.cpp:66]   --->   Operation 82 'load' 'weight_4_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 83 [1/1] (0.00ns)   --->   "%weight_5_addr = getelementptr [6 x i32]* %weight_5, i64 0, i64 %zext_ln66" [neural_net.cpp:66]   --->   Operation 83 'getelementptr' 'weight_5_addr' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_4 : Operation 84 [2/2] (0.73ns)   --->   "%weight_5_load = load i32* %weight_5_addr, align 4" [neural_net.cpp:66]   --->   Operation 84 'load' 'weight_5_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 85 [1/1] (0.00ns)   --->   "%weight_6_addr = getelementptr [6 x i32]* %weight_6, i64 0, i64 %zext_ln66" [neural_net.cpp:66]   --->   Operation 85 'getelementptr' 'weight_6_addr' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_4 : Operation 86 [2/2] (0.73ns)   --->   "%weight_6_load = load i32* %weight_6_addr, align 4" [neural_net.cpp:66]   --->   Operation 86 'load' 'weight_6_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 87 [1/1] (0.00ns)   --->   "%weight_7_addr = getelementptr [6 x i32]* %weight_7, i64 0, i64 %zext_ln66" [neural_net.cpp:66]   --->   Operation 87 'getelementptr' 'weight_7_addr' <Predicate = (!icmp_ln55)> <Delay = 0.00>
+ST_4 : Operation 88 [2/2] (0.73ns)   --->   "%weight_7_load = load i32* %weight_7_addr, align 4" [neural_net.cpp:66]   --->   Operation 88 'load' 'weight_7_load' <Predicate = (!icmp_ln55)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 89 [1/1] (0.72ns)   --->   "switch i3 %trunc_ln66, label %branch7 [
+    i3 0, label %branch0
+    i3 1, label %branch1
+    i3 2, label %branch2
+    i3 3, label %branch3
+    i3 -4, label %branch4
+    i3 -3, label %branch5
+    i3 -2, label %branch6
+  ]" [neural_net.cpp:68]   --->   Operation 89 'switch' <Predicate = (icmp_ln55)> <Delay = 0.72>
+ST_4 : Operation 90 [1/1] (0.73ns)   --->   "store i32 %sum_0, i32* %out_6_addr, align 4" [neural_net.cpp:68]   --->   Operation 90 'store' <Predicate = (icmp_ln55 & trunc_ln66 == 6)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 91 [1/1] (0.00ns)   --->   "br label %3" [neural_net.cpp:68]   --->   Operation 91 'br' <Predicate = (icmp_ln55 & trunc_ln66 == 6)> <Delay = 0.00>
+ST_4 : Operation 92 [1/1] (0.73ns)   --->   "store i32 %sum_0, i32* %out_5_addr, align 4" [neural_net.cpp:68]   --->   Operation 92 'store' <Predicate = (icmp_ln55 & trunc_ln66 == 5)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 93 [1/1] (0.00ns)   --->   "br label %3" [neural_net.cpp:68]   --->   Operation 93 'br' <Predicate = (icmp_ln55 & trunc_ln66 == 5)> <Delay = 0.00>
+ST_4 : Operation 94 [1/1] (0.73ns)   --->   "store i32 %sum_0, i32* %out_4_addr, align 4" [neural_net.cpp:68]   --->   Operation 94 'store' <Predicate = (icmp_ln55 & trunc_ln66 == 4)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 95 [1/1] (0.00ns)   --->   "br label %3" [neural_net.cpp:68]   --->   Operation 95 'br' <Predicate = (icmp_ln55 & trunc_ln66 == 4)> <Delay = 0.00>
+ST_4 : Operation 96 [1/1] (0.73ns)   --->   "store i32 %sum_0, i32* %out_3_addr, align 4" [neural_net.cpp:68]   --->   Operation 96 'store' <Predicate = (icmp_ln55 & trunc_ln66 == 3)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 97 [1/1] (0.00ns)   --->   "br label %3" [neural_net.cpp:68]   --->   Operation 97 'br' <Predicate = (icmp_ln55 & trunc_ln66 == 3)> <Delay = 0.00>
+ST_4 : Operation 98 [1/1] (0.73ns)   --->   "store i32 %sum_0, i32* %out_2_addr, align 4" [neural_net.cpp:68]   --->   Operation 98 'store' <Predicate = (icmp_ln55 & trunc_ln66 == 2)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 99 [1/1] (0.00ns)   --->   "br label %3" [neural_net.cpp:68]   --->   Operation 99 'br' <Predicate = (icmp_ln55 & trunc_ln66 == 2)> <Delay = 0.00>
+ST_4 : Operation 100 [1/1] (0.73ns)   --->   "store i32 %sum_0, i32* %out_1_addr, align 4" [neural_net.cpp:68]   --->   Operation 100 'store' <Predicate = (icmp_ln55 & trunc_ln66 == 1)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 101 [1/1] (0.00ns)   --->   "br label %3" [neural_net.cpp:68]   --->   Operation 101 'br' <Predicate = (icmp_ln55 & trunc_ln66 == 1)> <Delay = 0.00>
+ST_4 : Operation 102 [1/1] (0.73ns)   --->   "store i32 %sum_0, i32* %out_0_addr, align 4" [neural_net.cpp:68]   --->   Operation 102 'store' <Predicate = (icmp_ln55 & trunc_ln66 == 0)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 103 [1/1] (0.00ns)   --->   "br label %3" [neural_net.cpp:68]   --->   Operation 103 'br' <Predicate = (icmp_ln55 & trunc_ln66 == 0)> <Delay = 0.00>
+ST_4 : Operation 104 [1/1] (0.73ns)   --->   "store i32 %sum_0, i32* %out_7_addr, align 4" [neural_net.cpp:68]   --->   Operation 104 'store' <Predicate = (icmp_ln55 & trunc_ln66 == 7)> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_4 : Operation 105 [1/1] (0.00ns)   --->   "br label %3" [neural_net.cpp:68]   --->   Operation 105 'br' <Predicate = (icmp_ln55 & trunc_ln66 == 7)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 6.52>
+ST_5 : Operation 106 [1/2] (0.73ns)   --->   "%in_0_load = load i32* %in_0_addr, align 4" [neural_net.cpp:66]   --->   Operation 106 'load' 'in_0_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 107 [1/2] (0.73ns)   --->   "%in_1_load = load i32* %in_1_addr, align 4" [neural_net.cpp:66]   --->   Operation 107 'load' 'in_1_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 108 [1/2] (0.73ns)   --->   "%in_2_load = load i32* %in_2_addr, align 4" [neural_net.cpp:66]   --->   Operation 108 'load' 'in_2_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 109 [1/2] (0.73ns)   --->   "%in_3_load = load i32* %in_3_addr, align 4" [neural_net.cpp:66]   --->   Operation 109 'load' 'in_3_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 110 [1/2] (0.73ns)   --->   "%in_4_load = load i32* %in_4_addr, align 4" [neural_net.cpp:66]   --->   Operation 110 'load' 'in_4_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 111 [1/2] (0.73ns)   --->   "%in_5_load = load i32* %in_5_addr, align 4" [neural_net.cpp:66]   --->   Operation 111 'load' 'in_5_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 112 [1/1] (0.75ns)   --->   "%tmp = call i32 @_ssdm_op_Mux.ap_auto.6i32.i3(i32 %in_0_load, i32 %in_1_load, i32 %in_2_load, i32 %in_3_load, i32 %in_4_load, i32 %in_5_load, i3 %k_0)" [neural_net.cpp:66]   --->   Operation 112 'mux' 'tmp' <Predicate = true> <Delay = 0.75> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 113 [1/2] (0.73ns)   --->   "%weight_0_load = load i32* %weight_0_addr, align 4" [neural_net.cpp:66]   --->   Operation 113 'load' 'weight_0_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 114 [1/2] (0.73ns)   --->   "%weight_1_load = load i32* %weight_1_addr, align 4" [neural_net.cpp:66]   --->   Operation 114 'load' 'weight_1_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 115 [1/2] (0.73ns)   --->   "%weight_2_load = load i32* %weight_2_addr, align 4" [neural_net.cpp:66]   --->   Operation 115 'load' 'weight_2_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 116 [1/2] (0.73ns)   --->   "%weight_3_load = load i32* %weight_3_addr, align 4" [neural_net.cpp:66]   --->   Operation 116 'load' 'weight_3_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 117 [1/2] (0.73ns)   --->   "%weight_4_load = load i32* %weight_4_addr, align 4" [neural_net.cpp:66]   --->   Operation 117 'load' 'weight_4_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 118 [1/2] (0.73ns)   --->   "%weight_5_load = load i32* %weight_5_addr, align 4" [neural_net.cpp:66]   --->   Operation 118 'load' 'weight_5_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 119 [1/2] (0.73ns)   --->   "%weight_6_load = load i32* %weight_6_addr, align 4" [neural_net.cpp:66]   --->   Operation 119 'load' 'weight_6_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 120 [1/2] (0.73ns)   --->   "%weight_7_load = load i32* %weight_7_addr, align 4" [neural_net.cpp:66]   --->   Operation 120 'load' 'weight_7_load' <Predicate = true> <Delay = 0.73> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 0.73> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 1> <RAM>
+ST_5 : Operation 121 [1/1] (0.51ns)   --->   "%tmp_1 = call i32 @_ssdm_op_Mux.ap_auto.8i32.i3(i32 %weight_0_load, i32 %weight_1_load, i32 %weight_2_load, i32 %weight_3_load, i32 %weight_4_load, i32 %weight_5_load, i32 %weight_6_load, i32 %weight_7_load, i3 %trunc_ln66)" [neural_net.cpp:66]   --->   Operation 121 'mux' 'tmp_1' <Predicate = true> <Delay = 0.51> <Core = "MuxnS">   --->   Core 31 'MuxnS' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'mux'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 122 [1/1] (3.90ns)   --->   "%mul_ln66 = mul nsw i32 %tmp, %tmp_1" [neural_net.cpp:66]   --->   Operation 122 'mul' 'mul_ln66' <Predicate = true> <Delay = 3.90> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 3.90> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 123 [1/1] (1.14ns)   --->   "%sum = add nsw i32 %mul_ln66, %sum_0" [neural_net.cpp:66]   --->   Operation 123 'add' 'sum' <Predicate = true> <Delay = 1.14> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.14> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 124 [1/1] (0.00ns)   --->   "br label %.preheader" [neural_net.cpp:55]   --->   Operation 124 'br' <Predicate = true> <Delay = 0.00>
+
+State 6 <SV = 4> <Delay = 0.00>
+ST_6 : Operation 125 [1/1] (0.00ns)   --->   "br label %.preheader1" [neural_net.cpp:53]   --->   Operation 125 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 25ns, clock uncertainty: 3.12ns.
+
+ <State 1>: 0.736ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('i') with incoming values : ('i', neural_net.cpp:52) [62]  (0.736 ns)
+
+ <State 2>: 0.736ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', neural_net.cpp:53) [70]  (0.736 ns)
+
+ <State 3>: 0.809ns
+The critical path consists of the following:
+	'phi' operation ('j') with incoming values : ('j', neural_net.cpp:53) [70]  (0 ns)
+	'add' operation ('j', neural_net.cpp:53) [73]  (0.809 ns)
+
+ <State 4>: 0.73ns
+The critical path consists of the following:
+	'phi' operation ('sum') with incoming values : ('sum', neural_net.cpp:66) [79]  (0 ns)
+	'store' operation ('store_ln68', neural_net.cpp:68) of variable 'sum' on array 'out_6' [117]  (0.73 ns)
+
+ <State 5>: 6.53ns
+The critical path consists of the following:
+	'load' operation ('in_0_load', neural_net.cpp:66) on array 'in_0' [87]  (0.73 ns)
+	'mux' operation ('tmp', neural_net.cpp:66) [93]  (0.755 ns)
+	'mul' operation ('mul_ln66', neural_net.cpp:66) [111]  (3.9 ns)
+	'add' operation ('sum', neural_net.cpp:66) [112]  (1.14 ns)
+
+ <State 6>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

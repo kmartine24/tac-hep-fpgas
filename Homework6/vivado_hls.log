@@ -1,63 +1,76 @@
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2020.1/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'kmartine' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 6.1.166-1.el9.elrepo.x86_64) on Wed Apr 22 15:28:08 CDT 2026
+INFO: [HLS 200-10] For user 'kmartine' on host 'cmstrigger02.hep.wisc.edu' (Linux_x86_64 version 6.1.166-1.el9.elrepo.x86_64) on Thu Apr 23 16:36:58 CDT 2026
 INFO: [HLS 200-10] In directory '/scratch/kmartine'
-Sourcing Tcl script '/scratch/kmartine/proj_hw5_ex1/solution1/csynth.tcl'
-INFO: [HLS 200-10] Opening project '/scratch/kmartine/proj_hw5_ex1'.
-INFO: [HLS 200-10] Adding design file 'hw5_ex1.cpp' to the project
-INFO: [HLS 200-10] Adding design file 'hw5_ex1.h' to the project
-INFO: [HLS 200-10] Adding test bench file 'hw5_ex1_tb.cpp' to the project
-INFO: [HLS 200-10] Opening solution '/scratch/kmartine/proj_hw5_ex1/solution1'.
+Sourcing Tcl script '/scratch/kmartine/proj_neural_net/solution1/csynth.tcl'
+INFO: [HLS 200-10] Opening project '/scratch/kmartine/proj_neural_net'.
+INFO: [HLS 200-10] Adding design file 'neural_net.cpp' to the project
+INFO: [HLS 200-10] Adding test bench file 'neural_net_tb.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/scratch/kmartine/proj_neural_net/solution1'.
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
 INFO: [HLS 200-10] Setting target device to 'xcvu9p-flga2104-1-i'
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 25ns.
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
-INFO: [HLS 200-10] Analyzing design file 'hw5_ex1.cpp' ... 
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 170249 ; free virtual = 206049
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 170249 ; free virtual = 206049
+INFO: [HLS 200-10] Analyzing design file 'neural_net.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168667 ; free virtual = 204643
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168667 ; free virtual = 204643
 INFO: [HLS 200-10] Starting code transformations ...
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 170240 ; free virtual = 206041
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168670 ; free virtual = 204646
 INFO: [HLS 200-10] Checking synthesizability ...
-INFO: [XFORM 203-602] Inlining function 'read_data' into 'hw5_ex1' (hw5_ex1.cpp:64) automatically.
-INFO: [XFORM 203-602] Inlining function 'compute_blur' into 'hw5_ex1' (hw5_ex1.cpp:65) automatically.
-INFO: [XFORM 203-602] Inlining function 'write_data' into 'hw5_ex1' (hw5_ex1.cpp:66) automatically.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 170242 ; free virtual = 206043
-INFO: [XFORM 203-131] Reshaping array 'A' (hw5_ex1.cpp:22) in dimension 1 completely.
-INFO: [XFORM 203-131] Reshaping array 'B' (hw5_ex1.cpp:22) in dimension 1 completely.
-INFO: [XFORM 203-602] Inlining function 'read_data' into 'hw5_ex1' automatically.
-INFO: [XFORM 203-602] Inlining function 'compute_blur' into 'hw5_ex1' (hw5_ex1.cpp:65) automatically.
-INFO: [XFORM 203-602] Inlining function 'write_data' into 'hw5_ex1' automatically.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 170223 ; free virtual = 206025
-INFO: [HLS 200-472] Inferring partial write operation for 'temp2' (hw5_ex1.cpp:62:2)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp1' (hw5_ex1.cpp:6:9)
-INFO: [HLS 200-472] Inferring partial write operation for 'temp2' (hw5_ex1.cpp:12:9)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 170222 ; free virtual = 206023
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168674 ; free virtual = 204650
+INFO: [XFORM 203-101] Partitioning array 'in' (neural_net.cpp:5) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'out' (neural_net.cpp:5) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'weight' (neural_net.cpp:5) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168659 ; free virtual = 204636
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168657 ; free virtual = 204635
 INFO: [HLS 200-10] Starting hardware synthesis ...
-INFO: [HLS 200-10] Synthesizing 'hw5_ex1' ...
+INFO: [HLS 200-10] Synthesizing 'neural_net' ...
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-42] -- Implementing module 'hw5_ex1' 
+INFO: [HLS 200-42] -- Implementing module 'neural_net' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [SCHED 204-11] Starting scheduling ...
-WARNING: [SCHED 204-71] Latency directive discarded for region hls_label_0 since it contains subloops.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 20.84 seconds; current allocated memory: 148.769 MB.
+INFO: [HLS 200-111]  Elapsed time: 19.72 seconds; current allocated memory: 147.748 MB.
 INFO: [BIND 205-100] Starting micro-architecture generation ...
 INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.14 seconds; current allocated memory: 149.222 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 148.192 MB.
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [HLS 200-10] -- Generating RTL for module 'hw5_ex1' 
+INFO: [HLS 200-10] -- Generating RTL for module 'neural_net' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
-INFO: [RTGEN 206-500] Setting interface mode on port 'hw5_ex1/A' to 'ap_none'.
-INFO: [RTGEN 206-500] Setting interface mode on port 'hw5_ex1/B' to 'ap_ovld'.
-INFO: [RTGEN 206-500] Setting interface mode on function 'hw5_ex1' to 'ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Finished creating RTL model for 'hw5_ex1'.
-INFO: [HLS 200-111]  Elapsed time: 0.28 seconds; current allocated memory: 150.049 MB.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/in_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/out_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_0' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_1' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_2' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_3' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_4' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_5' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_6' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'neural_net/weight_7' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'neural_net' to 'ap_ctrl_hs'.
+INFO: [SYN 201-210] Renamed object name 'neural_net_mux_63_32_1_1' to 'neural_net_mux_63bkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'neural_net_mux_83_32_1_1' to 'neural_net_mux_83cud' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'neural_net_mux_63bkb': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'neural_net_mux_83cud': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'neural_net'.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 148.835 MB.
 INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
-INFO: [HLS 200-789] **** Estimated Fmax: 111.18 MHz
-INFO: [RTMG 210-278] Implementing memory 'hw5_ex1_temp1_ram (RAM)' using distributed RAMs.
-INFO: [RTMG 210-278] Implementing memory 'hw5_ex1_temp2_ram (RAM)' using distributed RAMs.
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 170204 ; free virtual = 206007
-INFO: [VHDL 208-304] Generating VHDL RTL for hw5_ex1.
-INFO: [VLOG 209-307] Generating Verilog RTL for hw5_ex1.
-INFO: [HLS 200-112] Total elapsed time: 23.03 seconds; peak allocated memory: 150.049 MB.
+INFO: [HLS 200-789] **** Estimated Fmax: 153.21 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1629.855 ; gain = 1228.707 ; free physical = 168652 ; free virtual = 204631
+INFO: [VHDL 208-304] Generating VHDL RTL for neural_net.
+INFO: [VLOG 209-307] Generating Verilog RTL for neural_net.
+INFO: [HLS 200-112] Total elapsed time: 21.81 seconds; peak allocated memory: 148.835 MB.
